@@ -5,9 +5,9 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'femsol-backend',
+  title: 'sanity-backend',
 
-  projectId: 'qm0wugkh',
+  projectId: '6ffaz546',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
