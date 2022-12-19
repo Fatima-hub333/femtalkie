@@ -8,7 +8,9 @@ import {ImCancelCircle} from 'react-icons/im'
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
-  const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer';
+  const userProfile = false
+
+  const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#Fc95fa] rounded';
 
   return (
     <div>
@@ -30,6 +32,18 @@ const Sidebar = () => {
               </div>
             </Link>
           </div>
+          {!userProfile && (
+            <div className='px-2 py-4 hidden xl:block '>
+              <p className='text-gray-400'>Log in to like and comment on videos</p>
+              <div className='pr-4 '>
+                <GoogleLogin
+                  clientId=''
+                  onSuccess={() => { }}
+                  onFailure={() => {}}
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
